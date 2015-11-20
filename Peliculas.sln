@@ -4,15 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Peliculas", "Peliculas\", "{385F409B-F396-4935-8B8F-5078D1C25C38}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{19FA05F3-CD69-4B13-8463-B5072BEA087C}|busPeliculas.dll;{D3020E77-DCF3-4330-967F-DB051DB7369D}|datPeliculas.dll;{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}|entPeliculas.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/Peliculas"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\juan\Peliculas\Peliculas\"
+		Debug.AspNetCompiler.PhysicalPath = "Peliculas\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Peliculas\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/Peliculas"
-		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\juan\Peliculas\Peliculas\"
+		Release.AspNetCompiler.PhysicalPath = "Peliculas\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Peliculas\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
@@ -22,15 +23,48 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Peliculas", "Peliculas\", "
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-UI", "1-UI", "{66FAA98B-B37C-487F-948C-F8CC2E7FAA6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Bsiness", "2-Bsiness", "{A5B5FF22-B980-440D-83CD-A587908405D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Data", "3-Data", "{DEE84CF9-C653-431B-B0BD-0108C4F46307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datPeliculas", "datPeliculas\datPeliculas.csproj", "{D3020E77-DCF3-4330-967F-DB051DB7369D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "busPeliculas", "busPeliculas\busPeliculas.csproj", "{19FA05F3-CD69-4B13-8463-B5072BEA087C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entPeliculas", "entPeliculas\entPeliculas.csproj", "{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{385F409B-F396-4935-8B8F-5078D1C25C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{385F409B-F396-4935-8B8F-5078D1C25C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{385F409B-F396-4935-8B8F-5078D1C25C38}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{385F409B-F396-4935-8B8F-5078D1C25C38}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D3020E77-DCF3-4330-967F-DB051DB7369D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3020E77-DCF3-4330-967F-DB051DB7369D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3020E77-DCF3-4330-967F-DB051DB7369D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3020E77-DCF3-4330-967F-DB051DB7369D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FA05F3-CD69-4B13-8463-B5072BEA087C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FA05F3-CD69-4B13-8463-B5072BEA087C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FA05F3-CD69-4B13-8463-B5072BEA087C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FA05F3-CD69-4B13-8463-B5072BEA087C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{385F409B-F396-4935-8B8F-5078D1C25C38} = {66FAA98B-B37C-487F-948C-F8CC2E7FAA6F}
+		{19FA05F3-CD69-4B13-8463-B5072BEA087C} = {A5B5FF22-B980-440D-83CD-A587908405D3}
+		{9EB4EA27-ED6D-4299-810F-B6DF38E092DE} = {A5B5FF22-B980-440D-83CD-A587908405D3}
+		{D3020E77-DCF3-4330-967F-DB051DB7369D} = {DEE84CF9-C653-431B-B0BD-0108C4F46307}
 	EndGlobalSection
 EndGlobal

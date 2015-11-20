@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>b4740b01-c5e5-4900-8d37-d7eb0a258a50</ProjectGuid>
+    <ProjectGuid>{19FA05F3-CD69-4B13-8463-B5072BEA087C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>busPeliculas</RootNamespace>
+    <RootNamespace>BlockBuster.Peliculas.Business</RootNamespace>
     <AssemblyName>busPeliculas</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,8 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="busCatalogo.cs" />
+    <Compile Include="busPelicula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\datPeliculas\datPeliculas.csproj">
+      <Project>{D3020E77-DCF3-4330-967F-DB051DB7369D}</Project>
+      <Name>datPeliculas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entPeliculas\entPeliculas.csproj">
+      <Project>{9EB4EA27-ED6D-4299-810F-B6DF38E092DE}</Project>
+      <Name>entPeliculas</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
