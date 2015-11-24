@@ -9,7 +9,7 @@ namespace BlockBuster.Peliculas.Business.Entity
     {
         public int id { get; set; }
         public string Nombre { get; set; }
-        public string Mail { get; set; }
+        public string Correo { get; set; }
         public string Password { get; set; }
 
     }

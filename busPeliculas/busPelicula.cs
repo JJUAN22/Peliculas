@@ -50,6 +50,14 @@ namespace BlockBuster.Peliculas.Business
             return lst;
         }
 
+        public List<entPelicula> ObtenerUltimas()
+        {
+            DataTable dt = new datPelicula().ObtenerUltimas();
+            List<entPelicula> lst = new List<entPelicula>();
+            lst = ob(dt);
+            return lst;
+        }
+
         private List<entPelicula> ob(DataTable dt)
         {
             List<entPelicula> lst = new List<entPelicula>();
@@ -66,7 +74,7 @@ namespace BlockBuster.Peliculas.Business
                 ent.FotoMini = dr["PELI_FOTO_MINI"].ToString();
                 ent.Clasificacion.Nombre = dr["CLAS_NOMB"].ToString();
                 ent.Genero.Nombre = dr["GEN_NOMB"].ToString();
-                ent.Genero.id = Convert.ToInt32(dr["PELI_CLAS_ID"]);
+                ent.Clasificacion.id = Convert.ToInt32(dr["PELI_CLAS_ID"]);
                 ent.Genero.id = Convert.ToInt32(dr["PELI_GENE_ID"]);
                 lst.Add(ent);
             }
@@ -74,5 +82,32 @@ namespace BlockBuster.Peliculas.Business
             return lst;
         }
 
+        public void Actualizar(entPelicula ent)
+        {
+            int filas = new datPelicula().Actualizar(ent.Nombre, ent.AnioLanzamiento, ent.Clasificacion.id, ent.Genero.id, ent.Estatus, ent.Sinopsis, ent.Trailer, ent.FotoPortada, ent.FotoMini, ent.Id);
+            if (filas != 1)
+            {
+                throw new ApplicationException("Error al Actualizar ");
+            }
+        }
+
+        public void Guardar(entPelicula ent)
+        {
+
+            int filas = new datPelicula().Insertar(ent.Nombre, ent.AnioLanzamiento, ent.Clasificacion.id, ent.Genero.id, ent.FehaAlta, ent.Estatus, ent.Sinopsis, ent.Trailer, ent.FotoPortada, ent.FotoMini);
+            if (filas != 1)
+            {
+                throw new ApplicationException("Error al Actualizar ");
+            }
+        }
+
+        public void Eliminar(int id)
+        {
+            int filas = new datPelicula().Eliminar(id);
+
+            if (filas != 1)
+
+                throw new ApplicationException("Error al Actualizar ");
+        }
     }
 }

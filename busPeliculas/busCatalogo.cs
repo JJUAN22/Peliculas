@@ -41,5 +41,21 @@ namespace BlockBuster.Peliculas.Business
             }
             return lst;
         }
+
+        public List<entUsuario> ObtenerUsuario(string Correo, string Password)
+        {
+            DataTable dt = new datCatalogos().ObtenerUsuario(Correo, Password);
+            List<entUsuario> lst = new List<entUsuario>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                entUsuario ent = new entUsuario();
+                ent.id = Convert.ToInt32(dr["USUA_ID"]);
+                ent.Nombre = dr["USUA_NOMB"].ToString();
+                ent.Correo = dr["USUA_CORR"].ToString();
+                ent.Password = dr["USUA_PASS"].ToString();
+                lst.Add(ent);
+            }
+            return lst;
+        }
     }
 }

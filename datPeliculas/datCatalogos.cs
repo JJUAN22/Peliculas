@@ -36,16 +36,17 @@ namespace BlockBuster.Peliclas.Data
             return dt;
         }
 
-        public DataTable obtenerUsuario(int Id)
+        public DataTable ObtenerUsuario(string Correo,string Password)
         {
             SqlCommand com = new SqlCommand("spObtenerUsuario", con);
             com.CommandType = CommandType.StoredProcedure;
-            com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, ParameterName = "@Id", Value = Id });
+            com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.NVarChar, ParameterName = "@Correo", Value = Correo });
+            com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.NVarChar, ParameterName = "@Password", Value = Password });
             SqlDataAdapter da = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
         }
-       
+
     }
 }
