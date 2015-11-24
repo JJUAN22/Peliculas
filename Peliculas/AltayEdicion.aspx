@@ -16,7 +16,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h1>
-                            Alta y edición de peliculas Matus
+                            Alta y edición de peliculas
                         </h1>
                     </div>
                     <div class="panel-body">
@@ -41,11 +41,20 @@
                                         <asp:TextBox CssClass="form-control" runat="server" ID="txtNombre" placeholder="Nombre de pelicula" />
                                         <br />
                                         <asp:DropDownList CssClass="form-control" runat="server" ID="ddlClasificacion" AppendDataBoundItems="true">
-                                            <asp:ListItem Text="[Elija clasificacion]" Value="-1" />
+                                            <asp:ListItem Text="Elija clasificacion" Value="-1" />
+                                            <asp:ListItem Text="A" Value="-1" />
+                                            <asp:ListItem Text="B" Value="-1" />
+                                            <asp:ListItem Text="C" Value="-1" />
+                                            <asp:ListItem Text="D" Value="-1" />
                                         </asp:DropDownList>
                                         <br />
                                         <asp:DropDownList CssClass="form-control" runat="server" ID="ddlGeneracion" AppendDataBoundItems="true">
-                                            <asp:ListItem Text="[Elige Genero]" Value="-1" />
+                                            <asp:ListItem Text="Elige Genero" Value="-1" />
+                                            <asp:ListItem Text="Animadas" Value="-1" />
+                                            <asp:ListItem Text="Ciencia Ficcion" Value="-1" />
+                                            <asp:ListItem Text="Drama" Value="-1" />
+                                            <asp:ListItem Text="Terror" Value="-1" />
+                                            <asp:ListItem Text="Romanticas" Value="-1" />
                                         </asp:DropDownList>
                                         <br />
                                         <asp:TextBox CssClass="form-control" runat="server" ID="txtFechaLanzamiento" />
@@ -66,11 +75,11 @@
                                     runat="server" />
                             </div>
                             <div class="col-xs-4" style="text-align: Center;">
-                                <asp:ImageButton ID="imbEliminar" ImageUrl="~/img/delete.png" Width="40px" ToolTip="Eliminar"
+                                <asp:ImageButton ID="imbEliminar" ImageUrl="~/img/save.png" Width="40px" ToolTip="Eliminar"
                                     runat="server" />
                             </div>
                             <div class="col-xs-4" style="text-align: Center;">
-                                <asp:ImageButton ID="imbGuardar" ImageUrl="~/img/save.png" Width="40px" ToolTip="Guardar"
+                                <asp:ImageButton ID="imbGuardar" ImageUrl="~/img/update.png" Width="40px" ToolTip="Guardar"
                                     runat="server" />
                             </div>
                         </div>
@@ -81,6 +90,7 @@
                 </div>
             </div>
             <div class="col-md-3 sol-sm-1">
+
             </div>
         </div>
     </div>
