@@ -41,8 +41,8 @@ namespace BlockBuster.Peliculas.Business
             }
             return lst;
         }
-
-        public List<entUsuario> ObtenerUsuario(string Correo, string Password)
+     
+        public entUsuario ObtenerUsuario(string Correo, string Password)
         {
             DataTable dt = new datCatalogos().ObtenerUsuario(Correo, Password);
             List<entUsuario> lst = new List<entUsuario>();
@@ -55,7 +55,7 @@ namespace BlockBuster.Peliculas.Business
                 ent.Password = dr["USUA_PASS"].ToString();
                 lst.Add(ent);
             }
-            return lst;
+            return lst[0];
         }
     }
 }
