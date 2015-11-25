@@ -102,22 +102,20 @@ public partial class _Default : System.Web.UI.Page
     }
     public void cargarcarrucel()
     {
+        List<entPelicula> lst = new List<entPelicula>();
+        lst = new busPelicula().ObtenerEstrenos();
 
-        SqlConnection con = new SqlConnection("Data Source = DESKTOP-5SFL1KF\\MSSQLSERVER2012; Initial Catalog=CINEPOLIS; User Id=sa; Password=12345;");
-        SqlDataAdapter da = new SqlDataAdapter("SELECT TOP 1000 [PELI_ID],[PELI_NOMB],[PELI_ANIO_LANZ],[PELI_CLAS_ID],[PELI_GENE_ID],[PELI_FECH_ALTA],[PELI_ESTA],[PELI_SINO],[PELI_TRAI],[PELI_FOTO_PORT],[PELI_FOTO_MINI],GENE_ID, GENE_NOMB, GENE_DESC,CLAS_ID, CLAS_NOMB, CLAS_DESC FROM [Pelicula] INNER JOIN Genero on GENE_ID=Pelicula.PELI_GENE_ID INNER JOIN Clasificacion on Clasificacion.CLAS_ID=Pelicula.PELI_CLAS_ID WHERE PELI_ANIO_LANZ > '01/01/2015'", con);
-        DataTable dt = new DataTable();
-        da.Fill(dt);
+        
         LiteralControl literalDos = new LiteralControl();
+
         LiteralControl literal = new LiteralControl();
         literalDos.Text = "";
         literal.Text = "";
         int contador = 0;
 
-        foreach (DataRow dr in dt.Rows)
+        foreach (entPelicula ent in lst)
         {
-            string nombrePeli = dr["PELI_NOMB"].ToString();
-
-            string fotoPortada = dr["PELI_FOTO_PORT"].ToString();
+            
             if (contador == 0)
 
                 literal.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\" class=\"active\"></li>";
@@ -128,8 +126,8 @@ public partial class _Default : System.Web.UI.Page
                 literalDos.Text += "<div class=\"item active\">";
             else
                 literalDos.Text += "<div class=\"item \">";
-            literalDos.Text += "                           <img src=\"" + fotoPortada + "\" style=\"height: 200 px\" width=\"400 px\"/>";
-            literalDos.Text += " <span class=\"style\"><strong>" + nombrePeli + "</strong></span>";
+            literalDos.Text += "                           <img src=\"" + ent.FotoPortada + "\" style=\"height: 200 px\" width=\"400 px\"/>";
+            literalDos.Text += " <span class=\"style\"><strong>" + ent.Nombre + "</strong></span>";
             literalDos.Text += "  <div class=\"carousel-caption\">";
 
             literalDos.Text += "                           </div>";
@@ -144,22 +142,67 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-}
-//btn_click
-//entUsuario user = new entUsuario();
-//string mail = txt.Mail.Text;
-//string pass = txt.Pass.Text;
+public void cargarcarrucel2()
+    {
+        List<entPelicula> lst = new List<entPelicula>();
+        lst = new busPelicula().ObtenerEstrenos();
 
-//entUsuario = new busCatalogo.ObtenerUsuario(mail,pass);
-//if(user != null)
-//{
+        
+        LiteralControl literalTres = new LiteralControl();
 
-//Session["User"] = user;
-//lbl.Mensaje.Text="Bienvenido"+ user.Nombre;
+        LiteralControl literalCua = new LiteralControl();
+        literalTres.Text = "";
+        literalCua.Text = "";
+        int contador = 0;
+
+        foreach (entPelicula ent in lst)
+        {
+            
+            if (contador == 0)
+
+                literal.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\" class=\"active\"></li>";
+            else
+
+                literal.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\"></li>";
+            if (contador == 0)
+                literalDos.Text += "<div class=\"item active\">";
+            else
+                literalCua.Text += "<div class=\"item \">";
+            literalCua.Text += "                           <img src=\"" + fotoPortada + "\" style=\"height: 200 px\" width=\"400 px\"/>";
+            literalCua.Text += " <span class=\"style\"><strong>" + nombrePeli + "</strong></span>";
+            literalCua.Text += "  <div class=\"carousel-caption\">";
+
+            literalCua.Text += "                           </div>";
+            literalCua.Text += "                       </div>";
+
+            contador++;
+
+        }
+        phCarucel1.Controls.Add(literal);
+        phCarrucel2.Controls.Add(literalDos);
+
+
+    }
+//    protected void btnEntrar_Click(object sender, EventArgs e)
+//    {
+////        entUsuario user = new entUsuario();
+////string mail = txtMail.Text;
+////string pass = txtPass.Text;
+
+////entUsuario = new busCatalogo.ObtenerUsuario(mail,pass);
+////if (user != null)
+////{
+
+////    Session["User"] = user;
+////    lbl.Mensaje.Text = "Bienvenido" + user.Nombre;
+////}
+////else
+////    throw new ApplicationException("Usuario o contraseña incorrecta");
+////    }
 //}
-//else
-//throw new ApplocationException("Usuario o contraseña incorrecta")
-//}
+
+
+
 
 //Page_Load
 //{

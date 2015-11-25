@@ -20,10 +20,10 @@
                         </h1>
                     </div>
                     <div class="panel-body">
-                        <div style="height: 900px; text-align: center; overflow: hidden;">
-                            <asp:Image ID="imgPortada" ImageUrl="~/img/Imagen_no_disponible.png" Width="600px"
+                        <div style="height: 400px; text-align: center; overflow: hidden;">
+                            <asp:Image ID="imgPortada" ImageUrl="~/img/Imagen_no_disponible.png" Width="300px"
                                 runat="server" /><br />
-                            <asp:FileUpload runat="server" ID="fuPortada" Width="200px" />
+                            <asp:FileUpload runat="server" ID="fuPortada" Width="400px" />
                         </div>
                         <div class="well">
                             <div>
@@ -32,10 +32,10 @@
                                         <asp:Image ImageUrl="~/img/Imagen_no_disponible.png" Width="200px" runat="server"
                                             ID="imgMini" />
                                         <asp:FileUpload CssClass="form-control" Width="200px" runat="server" ID="fuFotoMini" />
-                                        <br />
+                                        <%-- <br />
                                         <br />
                                         <asp:PlaceHolder runat="server" ID="phTrailer" />
-                                        <asp:TextBox class="form-control" runat="server" ID="txtTrailer" Width="200px" placeholder="Ruta de video" />
+                                        <asp:TextBox class="form-control" runat="server" ID="txtTrailer" Width="200px"placeholder="Ruta de video" />--%>
                                     </div>
                                     <div class="col-xs-6">
                                         <asp:TextBox CssClass="form-control" runat="server" ID="txtNombre" placeholder="Nombre de pelicula" />
@@ -57,8 +57,13 @@
                                             <asp:ListItem Text="Romanticas" Value="-1" />
                                         </asp:DropDownList>
                                         <br />
-                                        <asp:TextBox CssClass="form-control" runat="server" ID="txtFechaLanzamiento" />
-                                        <br />
+                                        <asp:TextBox CssClass="form-control" runat="server" ID="txtFechaLanzamiento" placeholder="Fecha de Lanzamiento" />
+                                        <%--<br />
+                                        <asp:Label Text="Sinópsis" runat="server" ID="lblSinopsis" />
+                                        <asp:TextBox CssClass="form-control" runat="server" TextMode="Multiline" Rows="4"
+                                            ID="txtSinopsis" MaxLength="499" />--%>
+                                    </div>
+                                    <div class="panel-body">
                                         <asp:Label Text="Sinópsis" runat="server" ID="lblSinopsis" />
                                         <asp:TextBox CssClass="form-control" runat="server" TextMode="Multiline" Rows="4"
                                             ID="txtSinopsis" MaxLength="499" />
@@ -69,7 +74,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="panel-body">
+                            <asp:PlaceHolder runat="server" ID="phTrailer" />
+                            <asp:TextBox class="form-control" runat="server" ID="txtTrailer" Width="200px" placeholder="Ruta de video" />
+                        </div>
+                        <%--<div class="row">
                             <div class="col-xs-4" style="text-align: Center;">
                                 <asp:ImageButton ID="imbActualizar" ImageUrl="~/img/edit.png" Width="40px" ToolTip="Actualizar"
                                     runat="server" />
@@ -82,7 +91,7 @@
                                 <asp:ImageButton ID="imbGuardar" ImageUrl="~/img/update.png" Width="40px" ToolTip="Guardar"
                                     runat="server" />
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
                     <div class="panel-footer">
                         <asp:LinkButton ID="LinkButton1" Text="Regresar Pagina Principal" runat="server" />
@@ -90,7 +99,6 @@
                 </div>
             </div>
             <div class="col-md-3 sol-sm-1">
-
             </div>
         </div>
     </div>
