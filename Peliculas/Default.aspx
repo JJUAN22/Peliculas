@@ -1,4 +1,4 @@
-﻿                                                                                                                                            <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -72,28 +72,25 @@
         <div class="row">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="col-md-3">
+                    <div class="col-xs-4">
                         <asp:TextBox ID="Nombre" runat="server" placeholder="Nombre de la Pelicula" />
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-4">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="Generobtn" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="true">
                                 Genero <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuGene">
-                                <li><a href="#" class="list-group-item
-    list-group-item-danger">Animadas</a></li>
-                                <li><a href="#" class="list-group-item
-    list-group-item-success">Ciencia Ficcion</a></li>
-                                <li><a href="#" class="list-group-item
-    list-group-item-info">Drama</a></li>
+                                <li><a href="#" class="list-group-item list-group-item-danger">Animadas</a></li>
+                                <li><a href="#" class="list-group-item list-group-item-success">Ciencia Ficcion</a></li>
+                                <li><a href="#" class="list-group-item list-group-item-info">Drama</a></li>
                                 <li><a href="#" class="list-group-item list-group-item-warning">Terror</a></li>
                                 <li><a href="#" class="list-group-item list-group-item-danger">Romantica</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-4">
                         <div class="dropdown">
                             <button class="btn
     btn-default dropdown-toggle" type="button" id="Clasificacionbtn" data-toggle="dropdown" aria-haspopup="true"
@@ -103,13 +100,12 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuClasi">
                                 <li><a href="#" class="list-group-item list-group-item-success">A</a></li>
                                 <li><a href="#" class="list-group-item list-group-item-info">B</a></li>
-                                <li><a href="#" class="list-group-item
-    list-group-item-warning">C</a></li>
+                                <li><a href="#" class="list-group-item list-group-item-warning">C</a></li>
                                 <li><a href="#" class="list-group-item list-group-item-danger">D</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                   <%-- <div class="col-md-3">
                         <div class="form-group">
                             <div class='input-group
     date' id='datetimepicker1'>
@@ -118,6 +114,24 @@
                                 </span>
                             </div>
                         </div>
+                    </div>--%>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                    </div>
+                    <div class="col-xs-3">
+                    <asp:ImageButton ID="imbBuscar" runat="server" ImageUrl="~/img/buscar.png" Width="150px" ToolTip="Buscar" />
+                    </div>
+                    <div class="col-xs-3">
+                    <div class="form-group">
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" />
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-xs-3">
                     </div>
                 </div>
             </div>

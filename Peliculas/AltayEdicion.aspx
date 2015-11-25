@@ -20,8 +20,8 @@
                         </h1>
                     </div>
                     <div class="panel-body">
-                        <div style="height: 200px; text-align: center; overflow: hidden;">
-                            <asp:Image ID="imgPortada" ImageUrl="~/img/Imagen_no_disponible.png" Width="200px"
+                        <div style="height: 900px; text-align: center; overflow: hidden;">
+                            <asp:Image ID="imgPortada" ImageUrl="~/img/Imagen_no_disponible.png" Width="600px"
                                 runat="server" /><br />
                             <asp:FileUpload runat="server" ID="fuPortada" Width="200px" />
                         </div>

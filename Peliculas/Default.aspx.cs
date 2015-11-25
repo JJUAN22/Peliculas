@@ -145,3 +145,29 @@ public partial class _Default : System.Web.UI.Page
     }
 
 }
+//btn_click
+//entUsuario user = new entUsuario();
+//string mail = txt.Mail.Text;
+//string pass = txt.Pass.Text;
+
+//entUsuario = new busCatalogo.ObtenerUsuario(mail,pass);
+//if(user != null)
+//{
+
+//Session["User"] = user;
+//lbl.Mensaje.Text="Bienvenido"+ user.Nombre;
+//}
+//else
+//throw new ApplocationException("Usuario o contraseña incorrecta")
+//}
+
+//Page_Load
+//{
+//if(Sessio["User") == null)
+
+//Response.Redirect("Default.aspx");
+//else
+//string id = Resquest.QueryString["ID"].ToString();
+//}
+
+
