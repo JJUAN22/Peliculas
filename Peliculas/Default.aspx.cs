@@ -105,7 +105,7 @@ public partial class _Default : System.Web.UI.Page
         List<entPelicula> lst = new List<entPelicula>();
         lst = new busPelicula().ObtenerEstrenos();
 
-        
+
         LiteralControl literalDos = new LiteralControl();
 
         LiteralControl literal = new LiteralControl();
@@ -115,7 +115,7 @@ public partial class _Default : System.Web.UI.Page
 
         foreach (entPelicula ent in lst)
         {
-            
+
             if (contador == 0)
 
                 literal.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\" class=\"active\"></li>";
@@ -142,12 +142,12 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-public void cargarcarrucel2()
+    public void cargarcarrucel2()
     {
         List<entPelicula> lst = new List<entPelicula>();
         lst = new busPelicula().ObtenerEstrenos();
 
-        
+
         LiteralControl literalTres = new LiteralControl();
 
         LiteralControl literalCua = new LiteralControl();
@@ -157,19 +157,19 @@ public void cargarcarrucel2()
 
         foreach (entPelicula ent in lst)
         {
-            
+
             if (contador == 0)
 
-                literal.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\" class=\"active\"></li>";
+                literalTres.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\" class=\"active\"></li>";
             else
 
-                literal.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\"></li>";
+                literalTres.Text += "<li data-target=\"#carouselDos\" data-slide-to=\"" + contador + "\"></li>";
             if (contador == 0)
-                literalDos.Text += "<div class=\"item active\">";
+                literalCua.Text += "<div class=\"item active\">";
             else
                 literalCua.Text += "<div class=\"item \">";
-            literalCua.Text += "                           <img src=\"" + fotoPortada + "\" style=\"height: 200 px\" width=\"400 px\"/>";
-            literalCua.Text += " <span class=\"style\"><strong>" + nombrePeli + "</strong></span>";
+            literalCua.Text += "                           <img src=\"" + ent.FotoPortada + "\" style=\"height: 200 px\" width=\"400 px\"/>";
+            literalCua.Text += " <span class=\"style\"><strong>" + ent.Nombre + "</strong></span>";
             literalCua.Text += "  <div class=\"carousel-caption\">";
 
             literalCua.Text += "                           </div>";
@@ -178,11 +178,12 @@ public void cargarcarrucel2()
             contador++;
 
         }
-        phCarucel1.Controls.Add(literal);
-        phCarrucel2.Controls.Add(literalDos);
+        phCarucel1.Controls.Add(literalTres);
+        phCarrucel2.Controls.Add(literalCua);
 
 
     }
+}
 //    protected void btnEntrar_Click(object sender, EventArgs e)
 //    {
 ////        entUsuario user = new entUsuario();
