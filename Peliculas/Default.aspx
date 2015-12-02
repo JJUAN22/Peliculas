@@ -13,7 +13,7 @@
         <div class="row  jumbotron">
             <div class="col-xs-6 ">
                 <h2>
-                    Bienvenidos</h2>
+                    Bienvenido</h2>
             </div>
             <div class="col-xs-3 ">
                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"

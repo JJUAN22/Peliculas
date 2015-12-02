@@ -157,7 +157,7 @@ public partial class _Default : System.Web.UI.Page
             literal.Text += "                        <textarea id=\"txtSinopsis\" class=\"form-control\" rows=\"5\" style=\"text-align: justify; background-color:White \" disabled=\"disabled\">" + ent.Sinopsis + "</textarea>";
             // bien  literal.Text += "                    </div>";
             literal.Text += "                    <div id=\"Div3\"; style=\"text-align: center;\">";
-            literal.Text += "                        <iframe src=\"" + ent.Trailer + "\" frameborder=\"0\" allowfullscreen  class=\"img-responsive img-rounded\" />";
+            literal.Text += "                        <iframe src=\"" + ent.Trailer + "\" frameborder=\"0\" allowfullscreen style=\"margin:auto;\" class=\"img-responsive img-rounded\" />";
             literal.Text += "                        </iframe>";
             literal.Text += "                    </div>";
             literal.Text += "                    <!--bien-->";
