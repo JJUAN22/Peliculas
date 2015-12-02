@@ -16,10 +16,12 @@
                     Bienvenidos</h2>
             </div>
             <div class="col-xs-3 ">
-                <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Accesa tu Cuenta</a>
+                <a class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+                    data-target="#myModal">Accesa tu Cuenta</a>
             </div>
             <div class="col-xs-3 ">
-                <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">Registrarte</a>
+                <a class="btn btn-primary btn-lg" data-toggle="modal" data-backdrop="static" data-keyboard="false"
+                    data-target="#myModal2">Registrarte</a>
             </div>
         </div>
     </div>
@@ -28,44 +30,38 @@
             <div id="carouselUno" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#carouselUno" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselUno" data-slide-to="1"></li>
-                    <li data-target="#carouselUno" data-slide-to="2"></li>
-                    <li data-target="#carouselUno" data-slide-to="3"></li>
+                    <asp:PlaceHolder ID="ph1" runat="server" />
                 </ol>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                    <asp:PlaceHolder ID="phCarucel1" runat="server" />
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carouselUno" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">
-                            Previous</span> </a><a class="right carousel-control" href="#carouselUno" role="button"
-                                data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
-                                </span><span class="sr-only">Next</span> </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div id="carouselDos" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselDos" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselDos" data-slide-to="1"></li>
-                    <li data-target="#carouselDos" data-slide-to="2"></li>
-                    <li data-target="#carouselDos" data-slide-to="3"></li>
-                </ol>
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <asp:PlaceHolder ID="phCarrucel2" runat="server" />
+                    <asp:PlaceHolder ID="ph2" runat="server" />
                 </div>
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carouselDos" role="button" data-slide="prev">
+                <a class="left carousel-control" href="#carouselUno" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">
-                        Previous</span> </a><a class="right carousel-control" href="#carouselDos" role="button"
+                        Previous</span> </a><a class="right carousel-control" href="#carouselUno" role="button"
                             data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
                             </span><span class="sr-only">Next</span> </a>
             </div>
+    </div>
+    <div class="col-md-6">
+        <div id="carouselDos" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <asp:PlaceHolder ID="phCarrucel1" runat="server" />
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <asp:PlaceHolder ID="phCarrucel2" runat="server" />
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carouselDos" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">
+                    Previous</span> </a><a class="right carousel-control" href="#carouselDos" role="button"
+                        data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
+                        </span><span class="sr-only">Next</span> </a>
         </div>
+    </div>
     </div>
     <div class="container">
         <div class="row">
@@ -137,20 +133,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="panel-body">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-4">
-                </div>
-            </div>
-        </div>
-        <div class="row" style="margin-top: 20px;">
-            <asp:PlaceHolder runat="server" ID="phCargarcartelera" />
-        </div>
+    <div class="row" style="margin-top: 20px;">
+        <asp:PlaceHolder runat="server" ID="phCargarcartelera" />
     </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

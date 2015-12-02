@@ -13,7 +13,7 @@ namespace BlockBuster.Peliclas.Data
 
         public datCatalogos()
         {
-            con = new SqlConnection("Data Source =TORO-PC\\MSSQLSERVER2012; initial catalog=Cinepolis; user Id=sa; Password=12345;");
+            con = new SqlConnection("Data Source =EVE; initial catalog=Cinepolis; user Id=sa; Password=12345;");
         }
 
         public DataTable ObtenerGenero()

@@ -13,7 +13,7 @@ namespace BlockBuster.Peliclas.Data
 
         public datPelicula()
         {
-            con = new SqlConnection("Data Source=SOPORTETECNICO\\MSSQLSERVER2012; Initial Catalog=Cinepolis; User Id=sa; Password=12345;");
+            con = new SqlConnection("Data Source=EVE; Initial Catalog=Cinepolis; User Id=sa; Password=12345;");
         }
 
         public DataTable ObtenerEstrenos()
@@ -28,7 +28,7 @@ namespace BlockBuster.Peliclas.Data
 
         public DataTable Obtener(int Id)
         {
-            SqlCommand com = new SqlCommand("spObtenerPelicula", con);
+            SqlCommand com = new SqlCommand("spObtenerPeliculaid", con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.Add(new SqlParameter() { SqlDbType = SqlDbType.Int, ParameterName = "@Id", Value = Id });
             SqlDataAdapter da = new SqlDataAdapter(com);
@@ -39,7 +39,7 @@ namespace BlockBuster.Peliclas.Data
 
         public DataTable Obtener()
         {
-            SqlCommand com = new SqlCommand("spObtenerPeliculaid", con);
+            SqlCommand com = new SqlCommand("spObtenerPelicula", con);
             com.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
